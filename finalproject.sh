@@ -1612,6 +1612,9 @@ echo "a villager bumps into you, which causes you to lose your chain of thought"
 load4
 ;;
 esac
+}#this function gets you back to the Mine Baron.
+function load3.1() {
+MineBaron
 }
 #this function settles how the player interacts the Mine
 function MineBaron() {
@@ -1620,7 +1623,41 @@ echo "YOU: Hello
 sleep 3
 MINEBARON: What do you want?"
 sleep 3
-load3
+echo " who are you?(who)
+what do you want?(want)
+What can I do?(do)"
+read answer
+case $answer in
+who | Who )
+echo "MINEBARON: Well $name, I am the Mine Baron."
+sleep 3
+echo "MINEBARON: I am in charge of Lyar's sole mine."
+sleep 3
+echo "MINEBARON: I make sure materials and ores a distributed nicely."
+sleep 3
+load3.1
+;;
+want | Want )
+echo "MINEBARON: ores, I need ores."
+sleep 3
+echo "MINEBARON: and more people."
+sleep 3
+echo "MINEBARON: I suppose you could help with that right?"
+sleep 3
+load3.1
+;;
+do | Do )
+echo "MINEBARON: well, you could go mining for me."
+sleep 3
+load3.1
+;;
+*)
+echo "you made the Mine baron fall asleep."
+sleep 3
+load3.1
+;;
+esac
+#load3
 }
 function Mining() {
 sleep 3
@@ -1662,9 +1699,9 @@ sleep 3
 echo "LOCATION: MINE"
 #prompt
 echo "You are in the Mine, What do you do?
-Mine(m)
-MineBaron(B)
-DeathForest(s)
+Mine ores(m)
+talk to Mine Baron(b)
+got into Death Forest(s)
 West(w)"
 read answer
 case $answer in

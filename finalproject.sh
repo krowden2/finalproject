@@ -1617,6 +1617,7 @@ esac
 function MineBaron() {
 #lets you talk to the MineBaron
 echo "YOU: Hello
+sleep 3
 MINEBARON: What do you want?"
 sleep 3
 load3
@@ -1848,17 +1849,17 @@ echo "LOCATION: HOME"
 echo
 echo
 echo "you are in your house, what will you do?
-Sleep(Bed)
-Leave(door)
-train(dummy)"
+Sleep(sleep)
+Leave(leave)
+train(train)"
 read answer
 #echo $answer
 case $answer in
-bed | Bed) 
+sleep | Sleep) 
 bed; sleep 3; load;;
-door | Door) 
+leave | Leave) 
 clear; sleep 3; echo "You leave the comfort of your home, and into the wilds."; sleep 5; DeathForest;;
-dummy | Dummy) 
+train | Train) 
 clear; sleep 3; echo "you decided to train with the dummy in your house"; dummy;;
 #*) echo "*clearing throat"; sleep 3; load;;
 esac

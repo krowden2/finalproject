@@ -1,3 +1,4 @@
+#!/bin/bash
 #Castle
 #This function is used to interact with the magic room
 function MagicRM() {

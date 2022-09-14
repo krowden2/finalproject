@@ -527,7 +527,7 @@ east(e)
 fight(f)"
 read answer
 case $answer in
-w | W )
+e | E )
 echo "you head west"
 sleep 3
 DungeonRM
@@ -542,7 +542,7 @@ echo "you head north"
 sleep 3
 ThroneRM
 ;;
-e | E )
+w | W )
 echo "you head west"
 sleep 3
 ArmoryRM

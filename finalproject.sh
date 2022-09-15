@@ -1,8 +1,8 @@
 #!/bin/bash
+clear
 #Castle
 #This function is used to interact with the magic room
 function MagicRM() {
-clear
 echo
 echo
 echo
@@ -630,7 +630,6 @@ load25
 esac
 }
 
-
 #this function serves for the user to interact with the Castle temple
 function CTemple() {
 clear
@@ -915,8 +914,7 @@ echo "GUARD: you may enter."
 sleep 3
 echo "What will you do?
 enter(e)
-road(r)
-"
+road(r)"
 read answer
 case $answer in
 e | E )
@@ -942,8 +940,7 @@ echo "GUARD: can't let you through now, come back later."
 sleep 3
 echo "now what?
 Breakin(b)
-road(r)
-"
+road(r)"
 read answer
 case $answer in
 b | B )
@@ -988,7 +985,6 @@ load16
 esac
 }
 
-
 #this function get user back at road
 function load11() {
 RoadField
@@ -1003,7 +999,7 @@ echo
 echo "LOCATION: ROAD MAIN"
 sleep 3
 echo "as you walk on the road, 5 highwaymen block the way
-      you are given no choice but to fight."
+you are given no choice but to fight."
 sleep 3
 clear
 combat
@@ -1125,10 +1121,9 @@ DeepForest
 function DeepForest() {
 clear
 sleep 3
-echo "
-
-
-LOCACTION: DEEP FOREST"
+echo "LOCACTION: DEEP FOREST"
+echo
+echo
 sleep 3
 echo "5 wolves come out of the trees to attack you"
 sleep 3
@@ -1216,10 +1211,9 @@ FTemple
 function FTemple() {
 clear
 sleep 3
-echo "
-
-
-LOCATION: FOREST TEMPLE"
+echo "LOCATION: FOREST TEMPLE"
+echo
+echo
 sleep 3
 echo "FORESTPRIEST: hello, $name. What may I help you with?
 Who is Bart(B)
@@ -1446,8 +1440,7 @@ Temple(1)
 Tree(2)
 Training(3)
 Where to go(4)
-go back(5)
-"
+go back(5)"
 read answer
 case $answer in
 1 )
@@ -1521,15 +1514,14 @@ sleep 3
 #enter the creepy death
 echo "The door opens on its own"
 sleep 4
-echo "
-
-
-then, A giant skelital hand comes out grasping you"
+echo
+echo
+echo "then, A giant skelital hand comes out grasping you"
 sleep 3
-echo "no one could have heard your screams as you are pulled inside the house.
-
-
-"
+echo "no one could have heard your screams as you are pulled inside the house."
+echo
+echo
+echo
 sleep 3
 echo "Indeed, you met a terrible fate."
 sleep 3
@@ -1542,9 +1534,8 @@ function Village() {
 clear
 sleep 3
 echo "LOCATION: VILLAGE"
-echo "
-
-"
+echo 
+echo
 echo "walk in a beutiful and friendly village, what do you do?
 Go North(n)
 Go East(e)
@@ -1612,7 +1603,8 @@ echo "a villager bumps into you, which causes you to lose your chain of thought"
 load4
 ;;
 esac
-}#this function gets you back to the Mine Baron.
+}
+#this function gets you back to the Mine Baron.
 function load3.1() {
 MineBaron
 }
@@ -1886,17 +1878,17 @@ echo "LOCATION: HOME"
 echo
 echo
 echo "you are in your house, what will you do?
-Sleep(sleep)
-Leave(leave)
-train(train)"
+Sleep(s)
+Leave(l)
+train(t)"
 read answer
 #echo $answer
 case $answer in
-sleep | Sleep) 
+s | S ) 
 bed; sleep 3; load;;
-leave | Leave) 
+l | L ) 
 clear; sleep 3; echo "You leave the comfort of your home, and into the wilds."; sleep 5; DeathForest;;
-train | Train) 
+t | T ) 
 clear; sleep 3; echo "you decided to train with the dummy in your house"; dummy;;
 #*) echo "*clearing throat"; sleep 3; load;;
 esac

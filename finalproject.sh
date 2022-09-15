@@ -1042,13 +1042,13 @@ Horseride
 function bet() {
 clear
 sleep 3
-echo "Annoncer: the horses are ready."
+echo "Announcer: the horses are ready."
 sleep 3
-echo "Annoncer: 3."
+echo "Announcer: 3."
 sleep 1
-echo "Annoncer: 2."
+echo "Announcer: 2."
 sleep 1
-echo "Annoncer: 1. and the horses are off."
+echo "Announcer: 1. and the horses are off."
 user=$((RANDOM % 10))
 Bet=$((RANDOM % 10))
 if [ $user =  $Bet ]
@@ -1080,7 +1080,7 @@ echo
 echo
 echo "LOCTATION: HORSE-RIDE"
 sleep 3
-echo "Annoncer: ladies, and and gents. welcome to Horse-Ride. here we are hosting the 60th rally of the century."
+echo "Announcer: ladies, and and gents. welcome to Horse-Ride. here we are hosting the 60th rally of the century."
 sleep 5
 echo "What are you going to do?
 Gamble on the winner(b)
@@ -1110,7 +1110,7 @@ sleep 5
 DeathForest
 ;;
 *)
-echo "Annoncer: the race will began in 10 minutes!"
+echo "Announcer: the race will began in 10 minutes!"
 load10
 ;;
 esac

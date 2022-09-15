@@ -1053,11 +1053,13 @@ user=$((RANDOM % 10))
 Bet=$((RANDOM % 10))
 if [ $user =  $Bet ]
 then
+sleep 3
 echo "the winner of the race was $user."
 sleep 3
 echo "you won a huge reward."
 elif [ $user -lt  $Bet ]
 then
+sleep 3
 echo "the winner of the race was $Bet."
 sleep 3
 echo "you won a nothing."
